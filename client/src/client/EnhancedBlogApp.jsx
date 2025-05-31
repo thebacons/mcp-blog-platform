@@ -528,7 +528,7 @@ export default function EnhancedBlogApp() {
       
       // Collect all the data needed for the blog
       const blogData = {
-        topic: blogTopic,
+        text: blogTopic, // Changed from 'topic' to 'text' to match server expectation
         useDateTitle,
         useTodaysPhotos,
         usePhotoData,
