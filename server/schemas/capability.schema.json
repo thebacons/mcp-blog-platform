@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Capability",
+  "description": "Schema for describing an agent's capability",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the capability (e.g., 'text-generation', 'image-analysis')"
+    },
+    "description": {
+      "type": "string",
+      "description": "A brief description of what the capability does"
+    },
+    "inputSchema": {
+      "type": "object",
+      "description": "JSON schema for the input this capability expects"
+    },
+    "outputSchema": {
+      "type": "object",
+      "description": "JSON schema for the output this capability produces"
+    }
+  },
+  "required": ["name", "description"]
+}

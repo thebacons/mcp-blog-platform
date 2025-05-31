@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentRegistration",
+  "description": "Schema for agent registration requests",
+  "type": "object",
+  "properties": {
+    "agentId": {
+      "type": "string",
+      "description": "Unique identifier for the agent"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "$ref": "./capability.schema.json"
+      }
+    },
+    "endpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "The callback URI for the agent"
+    }
+  },
+  "required": ["agentId", "capabilities", "endpoint"]
+}

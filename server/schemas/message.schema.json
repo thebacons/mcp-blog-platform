@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Message",
+  "description": "Schema for messages routed through the orchestrator",
+  "type": "object",
+  "properties": {
+    "messageId": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the message"
+    },
+    "capability": {
+      "type": "string",
+      "description": "The target capability name"
+    },
+    "payload": {
+      "type": "object",
+      "description": "The message content, should conform to the capability's inputSchema"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for the message"
+    }
+  },
+  "required": ["messageId", "capability", "payload"]
+}
