@@ -1,0 +1,25 @@
+{
+  "name": "orchestrator-client",
+  "version": "1.0.0",
+  "description": "Web client for testing MCP Orchestrator endpoints",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "client": "vite --config vite.config.js",
+    "dev": "concurrently \"npm run start\" \"npm run client\""
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "vite": "^5.2.8",
+    "@vitejs/plugin-react": "^4.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
